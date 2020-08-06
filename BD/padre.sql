@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 06-08-2020 a las 11:07:50
+-- Tiempo de generación: 06-08-2020 a las 15:37:12
 -- Versión del servidor: 10.4.11-MariaDB
 -- Versión de PHP: 7.4.6
 
@@ -30,9 +30,9 @@ SET time_zone = "+00:00";
 CREATE TABLE `hijos` (
   `id` int(10) UNSIGNED NOT NULL,
   `padre_id` int(10) UNSIGNED NOT NULL,
-  `nombre_H` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `apellido_H` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `edad` double NOT NULL
+  `nombre_completo_H` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `genero_H` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `edad_H` decimal(3,2) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
@@ -43,9 +43,9 @@ CREATE TABLE `hijos` (
 
 CREATE TABLE `padres` (
   `id` int(10) UNSIGNED NOT NULL,
-  `nombre` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `apellido` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `edad` double NOT NULL
+  `nombre_completo_P` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `genero_P` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `edad_P` decimal(3,2) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
